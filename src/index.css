@@ -1,13 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure the base elements have a white background */
+html,
 body {
+  background-color: white;
+  height: 100%; /* Full viewport height */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Root container styling */
+#root {
+  min-height: 100vh; /* Ensure full viewport height for the root */
+  display: flex;
+  flex-direction: column; /* Flex layout for stacking child elements */
+  background-color: white; /* White background for root container */
+}
+
+/* Main content area */
+main {
+  flex: 1; /* Allow the main content area to grow */
+  overflow-y: auto; /* Enable vertical scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling with bounce on iOS */
+  background-color: white; /* Ensure main has a white background */
 }
