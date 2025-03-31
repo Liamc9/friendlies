@@ -178,7 +178,7 @@ const ProfileView = ({
 
   // Navigate back to a specified route
   const handleNavigateBack = () => {
-    navigate(`/settings/${currentUser?.uid}`);
+    navigate(`/account/${currentUser?.uid}`);
   };
 
   // Trigger the hidden file input
